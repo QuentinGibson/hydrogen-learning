@@ -2,6 +2,7 @@ import {defer} from '@shopify/remix-oxygen';
 import {Await, useLoaderData, Link} from '@remix-run/react';
 import {Suspense} from 'react';
 import {Image, Money} from '@shopify/hydrogen';
+import EcoLandingPage from "../components/eco-bottle-landing"
 
 /**
  * @type {MetaFunction}
@@ -64,9 +65,7 @@ export default function Homepage() {
   const data = useLoaderData();
   return (
     <div className="home">
-      <h2>This is attached to the store</h2>
-      <FeaturedCollection collection={data.featuredCollection} />
-      <RecommendedProducts products={data.recommendedProducts} />
+      <EcoLandingPage />
     </div>
   );
 }

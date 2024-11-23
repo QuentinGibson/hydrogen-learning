@@ -13,13 +13,12 @@ export function Header({header, isLoggedIn, cart, publicStoreDomain}) {
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         <strong>{shop.name}</strong>
       </NavLink>
-      <HeaderMenu
-        menu={menu}
+      {/* <HeaderMenu menu={menu}
         viewport="desktop"
         primaryDomainUrl={header.shop.primaryDomain.url}
         publicStoreDomain={publicStoreDomain}
-      />
-      <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} />
+      /> */}
+      {/* <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} /> */}
     </header>
   );
 }
@@ -90,7 +89,7 @@ function HeaderCtas({isLoggedIn, cart}) {
     <nav className="header-ctas" role="navigation">
       <HeaderMenuMobileToggle />
       <NavLink prefetch="intent" to="/account" style={activeLinkStyle}>
-        <Suspense fallback="Sign in">
+        <Suspense fallback="Sig in">
           <Await resolve={isLoggedIn} errorElement="Sign in">
             {(isLoggedIn) => (isLoggedIn ? 'Account' : 'Sign in')}
           </Await>
