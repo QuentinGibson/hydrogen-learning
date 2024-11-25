@@ -3,7 +3,7 @@ import { CalendarHeartIcon, CircleDollarSign, Gift, Plane } from 'lucide-react'
 import { Link } from "@remix-run/react";
 import { Image } from '@shopify/hydrogen';
 
-export default function EcoBottleLanding() {
+export default function CalendarLandingPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
@@ -13,7 +13,7 @@ export default function EcoBottleLanding() {
             </h1>
             <p className="text-xl mb-8 text-gray-600">Design a personalized couple's calendar that celebrates you!</p>
             <div className="mb-8">
-              <Link to={"/"}>
+              <Link to={"/calendar"}>
                 <Button className="bg-blue-500 text-white hover:bg-blue-600"> <CalendarHeartIcon className="mr-2 h-4 w-4" />
                   Start Your Calendar
                 </Button>
@@ -58,7 +58,7 @@ export default function EcoBottleLanding() {
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Spark Your Romance?</h2>
             <p className="text-xl mb-8">Create your personalized couple's calendar and start planning unforgettable moments together!</p>
-            <Link to={"/"}>
+            <Link to={"/calendar"}>
               <Button className="bg-white text-blue-500 hover:bg-blue-50">
                 <CalendarHeartIcon className="mr-2 h-4 w-4" />
                 Create Your Calendar
